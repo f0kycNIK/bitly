@@ -59,8 +59,8 @@ def create_parser():
 
 if __name__ == "__main__":
     load_dotenv()
-    BITLY_TOKEN = os.getenv('TOKEN')
+    bitly_token = os.getenv('BITLY_TOKEN')
     parser = create_parser()
     args = parser.parse_args()
     user_url = args.url
-    check_link(user_url, BITLY_TOKEN)
+    check_link(user_url, bitly_token)
